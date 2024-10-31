@@ -189,6 +189,18 @@ footer .attribution {
   color: hsl(228, 45%, 44%);
 }
 
+#error-message {
+  color: hsla(7, 80%, 60%, 0.94);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in-out;
+  animation: fade-in 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Responsive design */
 @media screen and (min-width: 1024px) {
