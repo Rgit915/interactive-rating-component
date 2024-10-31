@@ -30,9 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Preview](https://github.com/Rgit915/interactive-rating-component/tree/master/screenshots/blog-preview-card-desktop-solution-preview.png)
+![Desktop Preview](https://github.com/Rgit915/interactive-rating-component/blob/master/screenshots/interactive-rating-component-desktop-solution-preview.png)
 
-![Active-states Preview](https://github.com/Rgit915/interactive-rating-component/tree/master/screenshots/blog-preview-card-active-states-solution-preview.png)
+![Active-states Preview](https://github.com/Rgit915/interactive-rating-component/blob/master/screenshots/interactive-rating-component-mobile-thankyou-state-solution-preview.png)
 
 
 ### Links
