@@ -10,12 +10,12 @@
   --color-neutral-white: hsl(0, 0%, 100%);
   --color-neutral-light-grey: hsl(217, 12%, 63%);
   --color-neutral-dark-blue: hsl(213, 19%, 18%);
+  --color-neutral-light-dark-blue: hsl(213, 20%, 22%);
   --color-neutral-very-dark-blue: hsl(216, 12%, 8%);
 }
 
-/* Typography */
 body {
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 15px;
   background-color: var(--color-neutral-very-dark-blue);
   color: var(--color-neutral-white);
@@ -28,8 +28,6 @@ body {
   text-align: center;
   overflow-x: hidden;
   transition: background-color 0.3s ease-in-out;
-
-
 }
 
 #rating {
@@ -38,9 +36,9 @@ body {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-
 }
-.container{
+
+.container {
   width: 300px;
   max-width: 100%;
   padding: 1rem;
@@ -51,40 +49,50 @@ body {
   border-radius: 1rem;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: flex-start;
   justify-content: space-between;
 }
-.card svg{
+.card svg {
   font-size: 2rem;
-  border-radius: 50%;
 
 }
+.card .svg-container {
+  background-color: hsl(213, 20%, 22%);
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .card h1 {
   font-weight: 700;
   font-size: 1.75rem;
-
 }
 .card p {
   font-size: 1rem;
   text-align: left;
   color: var(--color-neutral-light-grey);
-
 }
-.card .rating{
+.card .rating {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
 }
-.card span{
+.card span {
   font-size: 1rem;
-  color: var(--color-neutral-dark-blue);
-  background-color: var(--color-neutral-light-grey);
+  font-weight: 700;
+  color: var(--color-neutral-light-grey);
+  background-color: var(--color-neutral-light-dark-blue);
   border-radius: 50%;
   padding: 0.5rem;
   width: 2.5rem;
@@ -95,16 +103,122 @@ body {
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }
-.card button{
+.card button {
   border: none;
   background-color: var(--color-primary);
   color: var(--color-neutral-very-dark-blue);
   cursor: pointer;
   padding: 1rem;
   width: 100%;
-  margin: 1rem 0;
+  margin: 2rem 0;
   border-radius: 2rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.25rem;
   transition: background-color 0.2s;
+}
+
+/* Hover effects */
+.card span:hover {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-very-dark-blue);
+}
+.card button:hover {
+  background-color: var(--color-neutral-white);
+  color: var(--color-neutral-very-dark-blue);
+}
+
+/* Star rating */
+
+.star.active {
+  background-color: var(--color-neutral-white);
+  color: var(--color-neutral-very-dark-blue);
+}
+
+/* Thank you state */
+#thank-you{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.thank-you .card{
+  width: 100%;
+  gap: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.thank-you .selected{
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: inline;
+  color: var(--color-primary);
+  background-color: var(--color-neutral-light-dark-blue);
+}
+.thank-you p{
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-neutral-white);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+
+}
+footer .attribution {
+  font-size: 0.73rem;
+  text-align: center;
+  opacity: 0.8;
+  color: #8c8c8c;
+  margin-top: 3rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* Responsive design */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 500px;
+  }
+  .card {
+    width: 100%;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .card .rating {
+    gap: 2rem;
+  }
+  .card h1 {
+    font-size: 2.5rem;
+  }
+  .card span {
+    padding: 1.75rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  #starts {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+  }
+
+.thank-you p{
+  padding: 0 3rem;
+}
 }
