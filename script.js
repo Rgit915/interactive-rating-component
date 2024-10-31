@@ -1,5 +1,6 @@
 const stars = document.querySelectorAll('.star');
 let selectedRating = null;
+const errorMessage = document.getElementById('error-message');
 
 stars.forEach(star => {
   star.addEventListener('click', () => {
@@ -12,6 +13,9 @@ stars.forEach(star => {
     // Set the selected rating
     selectedRating = star.getAttribute('data-value');
 
+    // Hide the error message once a rating is selected
+    errorMessage.style.visibility = 'hidden';
+    errorMessage.textContent = ''; // Clear any previous error text
   });
 });
 
@@ -34,7 +38,9 @@ document.getElementById('submit').addEventListener('click', () => {
 
   } else {
 
-    console.log('Please select a rating.');
+    // Display the error message if no rating is selected
+    errorMessage.textContent = 'Please select a rating.';
+    errorMessage.style.visibility = 'visible';
 
   }
 });
